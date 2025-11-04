@@ -1,0 +1,32 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: admin-dashboard
+  title: Admin Dashboard
+  description: Internal administration panel for system management and monitoring
+  annotations:
+    github.com/project-slug: company/admin-dashboard
+  tags:
+    - frontend
+    - react
+    - typescript
+    - admin
+  links:
+    - url: https://github.com/company/admin-dashboard
+      title: Repository
+      icon: github
+    - url: https://admin.example.com
+      title: Production Dashboard
+      icon: dashboard
+    - url: https://admin-staging.example.com
+      title: Staging Dashboard
+      icon: dashboard
+spec:
+  type: website
+  lifecycle: production
+  owner: frontend-team
+  system: admin-tools
+  consumesApis:
+    - api:user-api
+    - api:analytics-api
+    - api:auth-api

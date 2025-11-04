@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: user-management
+  title: User Management System
+  description: Complete system for user lifecycle management, authentication, and authorization
+  tags:
+    - platform
+    - authentication
+    - users
+  links:
+    - url: https://wiki.example.com/systems/user-management
+      title: System Documentation
+      icon: docs
+spec:
+  owner: platform-team
+  domain: platform

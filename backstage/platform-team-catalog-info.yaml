@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: platform-team
+  title: Platform Team
+  description: Core platform and infrastructure team
+  annotations:
+    backstage.io/slack: "#platform-team"
+    backstage.io/email: platform-team@example.com
+  links:
+    - url: https://wiki.example.com/teams/platform
+      title: Team Wiki
+      icon: docs
+    - url: https://confluence.example.com/platform
+      title: Confluence Space
+      icon: docs
+spec:
+  type: team
+  profile:
+    displayName: Platform Team
+    email: platform-team@example.com
+  children: []

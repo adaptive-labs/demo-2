@@ -1,0 +1,40 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: user-service
+  title: User Management Service
+  description: Handles user authentication, authorization, and profile management
+  annotations:
+    github.com/project-slug: company/user-service
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - golang
+    - microservice
+    - rest-api
+    - authentication
+  links:
+    - url: https://github.com/company/user-service
+      title: Repository
+      icon: github
+    - url: https://api.example.com/users
+      title: Production API
+      icon: dashboard
+    - url: https://grafana.example.com/d/user-service
+      title: Grafana Dashboard
+      icon: grafana
+    - url: https://datadog.example.com/apm/service/user-service
+      title: APM Dashboard
+      icon: datadog
+spec:
+  type: service
+  lifecycle: production
+  owner: platform-team
+  system: user-management
+  dependsOn:
+    - resource:postgres-db
+    - resource:redis-cache
+  consumesApis:
+    - api:auth-api
+    - api:notification-api
+  providesApis:
+    - api:user-api

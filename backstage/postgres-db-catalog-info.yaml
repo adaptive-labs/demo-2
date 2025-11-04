@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: postgres-db
+  title: PostgreSQL Main Database
+  description: Primary PostgreSQL database cluster for application data
+  annotations:
+    backstage.io/managed-by-location: url:https://github.com/company/infrastructure
+  tags:
+    - database
+    - postgresql
+    - high-availability
+  links:
+    - url: https://grafana.example.com/d/postgres-main
+      title: Database Metrics
+      icon: grafana
+    - url: https://pgadmin.example.com
+      title: pgAdmin Console
+      icon: dashboard
+spec:
+  type: database
+  lifecycle: production
+  owner: data-team
+  dependsOn:
+    - resource:backup-storage

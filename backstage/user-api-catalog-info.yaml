@@ -1,0 +1,29 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: user-api
+  title: User Management API
+  description: RESTful API for user operations including CRUD, search, and authentication
+  annotations:
+    github.com/project-slug: company/user-service
+  tags:
+    - rest
+    - openapi
+    - v1
+  links:
+    - url: https://api.example.com/users/docs
+      title: API Documentation
+      icon: docs
+    - url: https://api.example.com/users/openapi.json
+      title: OpenAPI Specification
+      icon: code
+spec:
+  type: openapi
+  lifecycle: production
+  owner: platform-team
+  system: user-management
+  definition: |
+    openapi: 3.0.0
+    info:
+      title: User Management API
+      version: 1.0.0
