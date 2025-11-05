@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: local-catalog
+  title: Local Catalog Discovery
+  description: Local file-based catalog references in monorepo
+  tags:
+    - catalog
+    - local
+    - monorepo
+spec:
+  type: file
+  targets:
+    - ./catalog-info.yaml
+    - services/user-service/catalog-info.yml
+    - services/auth-service/catalog-info.yaml
+    - services/payment-service/service.yml
+    - infrastructure/databases/catalog-info.yaml
+    - infrastructure/queues/catalog-info.yaml

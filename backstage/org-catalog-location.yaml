@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: org-catalog
+  title: Organization Catalog Locations
+  description: Central discovery of all organization catalogs
+  tags:
+    - catalog
+    - discovery
+spec:
+  type: url
+  targets:
+    - https://github.com/myorg/frontend/blob/main/catalog-info.yaml
+    - https://github.com/myorg/backend/blob/main/catalog-info.yaml
+    - https://github.com/myorg/infrastructure/blob/main/catalog-info.yaml
+    - https://github.com/myorg/data-platform/blob/main/catalog-info.yaml
