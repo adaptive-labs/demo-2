@@ -17,23 +17,22 @@ tags:
 links:
   - name: Repository
     url: https://github.com/company/analytics-service
+    icon: Link
   - name: API Documentation
     url: https://docs.company.com/analytics-api
+    icon: Link
   - name: Grafana Metrics
     url: https://grafana.company.com/d/analytics-service
+    icon: Link  
   - name: Query Performance
     url: https://datadog.company.com/analytics-queries
+    icon: Link
   - name: On-Call Runbook
     url: https://wiki.company.com/runbooks/analytics
+    icon: Link
 interfaces:
   http:
-    baseUrl: https://api.company.com/analytics
-    openapi: https://api.company.com/analytics/openapi.json
-    version: v2
-    auth:
-      type: apikey
-    rateLimits:
-      requestsPerMinute: 300
+    openapi: https://petstore3.swagger.io/api/v3/openapi.json
 relations:
   - type: reads_from
     target: database:postgres-db
