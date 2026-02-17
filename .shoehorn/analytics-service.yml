@@ -1,7 +1,7 @@
 schemaVersion: 1
 service:
   id: analytics-service
-  name: Analytics Service
+  name: Analytics Service API
   type: api
 owner:
   - type: team
