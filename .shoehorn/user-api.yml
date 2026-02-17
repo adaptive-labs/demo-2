@@ -27,13 +27,8 @@ links:
     url: https://wiki.company.com/runbooks/user-api
 interfaces:
   http:
-    baseUrl: https://api.company.com/users
-    openapi: ./api/openapi.yaml
-    version: v1
-    auth:
-      type: oauth2
-    rateLimits:
-      requestsPerMinute: 600
+    # Option 1: URL to OpenAPI spec (public Petstore API for testing)
+    openapi: https://petstore3.swagger.io/api/v3/openapi.json
 relations:
   - type: depends_on
     target: database:postgres-db
