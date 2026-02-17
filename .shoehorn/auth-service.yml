@@ -27,18 +27,7 @@ links:
     url: https://company.pagerduty.com/services/auth-service
 interfaces:
   http:
-    baseUrl: https://auth.company.com
-    openapi: https://auth.company.com/openapi.json
-    version: v2
-    auth:
-      type: oauth2
-    rateLimits:
-      requestsPerMinute: 1000
-  grpc:
-    package: auth.v1
-    services:
-      - AuthService
-      - TokenService
+    openapi: https://petstore3.swagger.io/api/v3/openapi.json
 relations:
   - type: depends_on
     target: database:postgres-db
