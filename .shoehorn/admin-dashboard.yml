@@ -27,22 +27,3 @@ links:
     url: https://storybook.company.com/admin
   - name: User Guide
     url: https://docs.company.com/admin-dashboard
-relations:
-  - type: consumes_api
-    target: service:user-api
-    notes: User management and moderation
-  - type: consumes_api
-    target: service:analytics-service
-    notes: Platform metrics and dashboards
-  - type: consumes_api
-    target: service:auth-service
-    notes: Admin authentication with 2FA
-  - type: consumes_api
-    target: service:ml-recommendation-service
-    notes: Model performance and A/B test results
-  - type: reads_from
-    target: database:postgres-db
-    notes: Direct database queries for advanced reports
-  - type: deployed_to
-    target: service:kubernetes-prod
-    notes: Internal-only ingress
