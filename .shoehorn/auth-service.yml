@@ -3,6 +3,7 @@ service:
   id: auth-service
   name: Authentication Service
   type: service
+  tier: bronze
 owner:
   - type: team
     id: platform-team
