@@ -1,0 +1,19 @@
+schemaVersion: 1
+service:
+  id: push-gateway
+  name: Push Gateway
+  type: service
+  tier: medium
+  description: Delivers push notifications to iOS and Android.
+lifecycle: production
+tags:
+- adaptive-labs
+- notifications
+owner:
+- type: team
+  id: notifications
+links:
+- name: Runbook
+  url: ./docs/runbook.md
+- name: Onboarding
+  url: ./docs/onboarding.md
